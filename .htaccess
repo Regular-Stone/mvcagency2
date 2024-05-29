@@ -1,0 +1,2 @@
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+# Réécriture de l'URL pour /accueil vers /index.php
