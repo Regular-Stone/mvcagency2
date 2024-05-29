@@ -13,7 +13,7 @@
 
 
     // On inclut le fichier des routes
-    $routes = require 'config/routes.php';
+    $routes = require 'core/config/routes.php';
 
 
     

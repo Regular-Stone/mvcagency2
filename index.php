@@ -1,4 +1,4 @@
 <?php
-    require_once 'core/Router.php';
+    require_once 'Autoload.php';
     $router = new Router();
     $router->routeRequest();
