@@ -1,7 +1,7 @@
 <?php
     class HomeController{
         public function index(){
-            echo 'Home';
+            require_once 'views/annonces/index.php';
         }
 
         public function about(){

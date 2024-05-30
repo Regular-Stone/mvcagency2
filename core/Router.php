@@ -1,4 +1,6 @@
 <?php
+    require_once 'config/rootConfig.php';
+
     class Router{
 
     public function routeRequest() {
@@ -15,10 +17,9 @@
     // On inclut le fichier des routes
     $routes = require 'core/config/routes.php';
 
-
+    
     
     $controllerName = !empty($urlParts[0]) ? ucfirst(cleaner($urlParts[0])) . 'Controller' : 'HomeController';
-
     // On inclut le contrôleur correspondant à la page demandée que si le fichier existe et que la page est autorisée sinon on affiche une page d'erreur
     (((file_exists('controllers/' . $controllerName . '.php')) && (array_key_exists($controllerName, $routes)))) ? require_once 'controllers/' . $controllerName . '.php' : require_once 'controllers/ErrorController.php';
 
