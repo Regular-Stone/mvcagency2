@@ -1,1 +1,2 @@
-/core/config/*
+/core/config/databaseConfig.php
+/core/config/routes.php
