@@ -4,6 +4,6 @@
 return [
     'HomeController' => ['index', 'about', 'contact'],
     'UserController' => ['login', 'register', 'logout'],
-    'AnnonceController' => ['index', 'addAnnonce'],
+    'AnnonceController' => ['index', 'addAnnonce', 'registerAnnonce', 'showAnnonce', 'deleteAnnonce'],
     // Ajoutez d'autres contrôleurs et actions ici
 ];

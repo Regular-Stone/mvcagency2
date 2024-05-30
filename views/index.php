@@ -17,9 +17,9 @@
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Regular Product</h5>
+                            <h5 class="fw-bolder">Accueil Product</h5>
                             <!-- Product price-->
-                            400.00 €
+                            €400.00
                         </div>
                     </div>
                     <!-- Product actions-->

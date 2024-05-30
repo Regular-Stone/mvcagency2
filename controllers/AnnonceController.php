@@ -16,4 +16,20 @@
             $content = ob_get_clean();
             require_once 'views/includes/template.php';
         }
+
+        public function registerAnnonce() {
+            $pageTitle = "Et c'est gg wp !";
+            ob_start();
+            require_once 'views/annonces/registerAnnonce.php';
+            $content = ob_get_clean();
+            require_once 'views/includes/template.php';
+        }
+
+        public function showAnnonce() {
+            $pageTitle = "Annonces enregistrées";
+            ob_start();
+            require_once 'views/annonces/showAnnonce.php';
+            $content = ob_get_clean();
+            require_once 'views/includes/template.php';
+        }
     }

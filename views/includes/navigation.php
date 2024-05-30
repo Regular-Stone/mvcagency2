@@ -16,9 +16,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Locations</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Nouvelle annonce</a></li>
+                                <li><a class="dropdown-item" href="<?=ROOT?>annonce/addAnnonce">Nouvelle annonce</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Tous nos logements</a></li>
+                                <li><a class="dropdown-item" href="<?=ROOT?>annonce/showAnnonce">Tous nos logements</a></li>
                                 <li><a class="dropdown-item" href="#!">Annonces populaires</a></li>
                                 <li><a class="dropdown-item" href="#!">Annonces récentes</a></li>
                             </ul>

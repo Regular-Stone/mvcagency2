@@ -1,6 +1,6 @@
 <div class="container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
     <h1 class="text-center mb-4">Ajouter une annonce</h1>
-    <form action="index.php?controller=annonce&action=addAnnonce" method="post" enctype="multipart/form-data" class="w-50">
+    <form action="<?=ROOT?>annonce/registerAnnonce" method="post" enctype="multipart/form-data" class="w-50">
         <div class="form-group mb-3">
             <label for="title">Titre : </label>
             <input type="text" class="form-control" id="title" name="title" required>
@@ -32,7 +32,8 @@
         </div>
         <div class="form-group mb-3 d-flex justify-content-center align-items-center">
             <label for="image" class="me-3">Image pour l'annonce : </label>
-            <input type="file" class="form-control-file" id="image" name="image" required>
+            <input type="file" class="form-control-file" id="image" name="image" accept=".jpeg, .png, .jpg, .svg" required>
+            <input type="hidden" name="MAX_FILE_SIZE" value="26214400">
         </div>
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Ajouter</button>
