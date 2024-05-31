@@ -3,7 +3,7 @@
 
     class Router{
 
-    public function routeRequest() {
+    public static function routeRequest() : void{
     // On inclut la fonction sanitize() pour nettoyer les données
     require_once 'utils/cleaner.php';
     $url = isset($_GET['url']) ? cleaner($_GET['url']) : '/';

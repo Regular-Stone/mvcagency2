@@ -1,6 +1,6 @@
 <?php
     class HomeController{
-        public function index(){
+        public function index() : void{
             require_once 'views/index.php';
         }
 

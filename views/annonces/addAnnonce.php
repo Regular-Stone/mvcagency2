@@ -1,4 +1,4 @@
-<div class="container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+<div onload="scrollHere()" class="container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
     <h1 class="text-center mb-4">Ajouter une annonce</h1>
     <form action="<?=ROOT?>annonce/registerAnnonce" method="post" enctype="multipart/form-data" class="w-50">
         <div class="form-group mb-3">
@@ -33,10 +33,19 @@
         <div class="form-group mb-3 d-flex justify-content-center align-items-center">
             <label for="image" class="me-3">Image pour l'annonce : </label>
             <input type="file" class="form-control-file" id="image" name="image" accept=".jpeg, .png, .jpg, .svg" required>
-            <input type="hidden" name="MAX_FILE_SIZE" value="26214400">
+            <input type="hidden" name="MAX_FILE_SIZE" value="3145728"> <!-- 3Mo = 3 * 1024 * 1024 = 3 145 728  -->
         </div>
         <div class="d-flex justify-content-center">
             <button type="submit" class="btn btn-primary">Ajouter</button>
         </div>
     </form>
 </div>
+<script>
+    function scrollHere() {
+        const pageHeight = document.body.scrollHeight;
+        console.log(pageHeight);
+        window.scrollTo(0, pageHeight);
+    }
+
+    scrollHere();
+</script>

@@ -1,17 +1,16 @@
 <?php
-    class Database {
-        private static $instance;
-        private $connexion;
+class Database {
+    private static ?Database $instance = null;
+    private PDO $connexion;
 
-        private function __construct($host, $dbname, $user, $password) {
-            $this->connexion = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-        }
-
-        public static function getInstance() {
-            if (!isset(self::$instance)) {
-                require_once 'core/config/databaseConfig.php';
-                self::$instance = new Database($host, $dbname, $user, $password);
-            }
-            return self::$instance;
-        }
+    private function __construct(string $host, string $dbname, string $user, string $password){
+        $this->connexion = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
     }
+
+    public static function getInstance(string $host, string $dbname, string $user, string $password): Database {
+        if (self::$instance === null) {
+            self::$instance = new Database($host, $dbname, $user, $password);
+        }
+        return self::$instance;
+    }
+}

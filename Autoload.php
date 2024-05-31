@@ -1,18 +1,17 @@
 <?php
 
 class Autoload {
-    public static function register() {
+    public static function register() : void{
         spl_autoload_register(array(__CLASS__, 'load'));
     }
 
-    public static function load($className) {
+    public static function load(string $className) : void{
         $baseDir  = __DIR__ . '/';
         $directories = [
             'controllers/',
             'models/',
             'views/',
             'core/',
-            'core/database/',
             '/',
         ];
 

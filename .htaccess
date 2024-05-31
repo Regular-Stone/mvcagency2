@@ -2,3 +2,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 # Réécriture de l'URL pour /accueil vers /index.php
+SetEnv DB_HOST localhost
+SetEnv DB_NAME mvcagency
+SetEnv DB_USER root
+SetEnv DB_PASS hellodu47
